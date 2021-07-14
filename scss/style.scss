@@ -30,11 +30,15 @@ nav{
         }
 
         &:first-child{
-            @include nav-link-load-nth(nav-link-load-first, -1000%, 50%, -1000%);
+            @include nav-link-load-nth(nav-link-load-first, -1000%, 50%);
+
+            transform: translateX(-1000%);
         }
 
         &:last-child{
-             @include nav-link-load-nth(nav-link-load-last, 1000%, -50%, 1000%);
+            @include nav-link-load-nth(nav-link-load-last, 1000%, -50%);
+
+            transform: translateX(1000%);
         }
     }
 

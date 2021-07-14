@@ -59,8 +59,8 @@ nav li:hover {
 }
 
 nav li:first-child {
-  transform: translateX(-1000%);
   animation-name: nav-link-load-first;
+  transform: translateX(-1000%);
 }
 
 @keyframes nav-link-load-first {
@@ -76,8 +76,8 @@ nav li:first-child {
 }
 
 nav li:last-child {
-  transform: translateX(1000%);
   animation-name: nav-link-load-last;
+  transform: translateX(1000%);
 }
 
 @keyframes nav-link-load-last {

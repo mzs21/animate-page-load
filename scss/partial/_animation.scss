@@ -23,10 +23,7 @@
 }
 
 
-@mixin nav-link-load-nth($animationName, $translateXValueAt0, $translateXValueAt90, $defaultTranslateXValue){
-
-    transform: translateX($defaultTranslateXValue);
-    
+@mixin nav-link-load-nth($animationName, $translateXValueAt0, $translateXValueAt90){
     animation-name: $animationName;
 
     @keyframes #{$animationName}{
