@@ -1,0 +1,66 @@
+@import 'partial/animation';
+
+body{
+    margin: 0;
+}
+
+nav{
+    background-color: lighten($color: rgba(11, 20, 63, 0.979), $amount: 20%);
+    color: white;
+
+    animation: nav-load 300ms ease-in 400ms;
+
+    ul{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    li{
+        list-style: none;
+        padding: 10px;
+        margin: 0 10px;
+
+        animation: nav-link-load 500ms ease-in 400ms forwards;
+
+        transform: scale(0);
+
+        &:hover{
+            background-color: lighten(rgba(11, 20, 63, 0.979), $amount: 50%);
+        }
+
+        &:first-child{
+            @include nav-link-load-nth(nav-link-load-first, -1000%, 50%, -1000%);
+        }
+
+        &:last-child{
+             @include nav-link-load-nth(nav-link-load-last, 1000%, -50%, 1000%);
+        }
+    }
+
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+main{
+    padding: 30px;
+
+    h1{
+        animation: article-load 300ms ease-in 800ms forwards;
+
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    
+    p{
+        text-align: justify;
+        text-justify: inter-word;
+
+        animation: article-load 300ms ease-in 1000ms forwards;
+
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}

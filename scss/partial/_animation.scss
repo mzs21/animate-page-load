@@ -1,0 +1,58 @@
+@keyframes nav-load{
+    0%{
+        transform: translateY(-100%);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes nav-link-load{
+    0%{
+        transform: scale(0);
+    }
+
+    90%{
+        transform: scale(1.1);
+    }
+    
+    100%{
+        transform: scale(1);
+    }    
+}
+
+
+@mixin nav-link-load-nth($animationName, $translateXValueAt0, $translateXValueAt90, $defaultTranslateXValue){
+
+    transform: translateX($defaultTranslateXValue);
+    
+    animation-name: $animationName;
+
+    @keyframes #{$animationName}{
+        0%{
+            transform: translateX($translateXValueAt0);
+        }
+
+        90%{
+            transform: translateX($translateXValueAt90);
+        }
+        
+        100%{
+            transform: translateX(0);
+        }    
+    }
+}
+
+
+@keyframes article-load{
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
